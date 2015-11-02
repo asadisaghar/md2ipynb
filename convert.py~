@@ -1,0 +1,13 @@
+def md2notebook(filename):
+    indent = "    "
+    blocks = []
+    blocktypes = []
+    with open(filename) as f:
+        for line in f:
+            line = line[:-1]
+            if not line.strip():
+                iscode = True
+            if line.startswith(indent):
+                iscode = iscode and True
+                
+                
